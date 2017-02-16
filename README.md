@@ -31,7 +31,7 @@ void OnDeinit(const int reason)
 
 #ifdef __MQL4__
     #import "signal.dll" 
-    int  signal_open(int &n1, int &n2, int &n3, int &type, int &sila); 
+    int  signal_open(int &n1, int &n2, int &n3, int &n4, int &type, int &sila); 
     #import
 #endif
 
@@ -42,12 +42,13 @@ void OnTimer()
       int n1;
       int n2;
       int n3;
+      int n4;
       int type;
       int sila;
-         signal_open(n1, n2, n3, type, sila);
+         signal_open(n1, n2, n3, n4, type, sila);
          if(type!=0)
          {
-               Print(n1, " ", n2, " ", n3, " ", type, " ", sila);
+               Print(n1, " ", n2, " ", n3, " ",n4," ", type, " ", sila);
          }
       Sleep(10);
       }
